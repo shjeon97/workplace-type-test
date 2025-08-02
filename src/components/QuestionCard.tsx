@@ -26,10 +26,10 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
       className="card max-w-4xl mx-auto"
     >
       <div className="text-center mb-6">
-        <div className="text-sm text-gray-500 mb-2">
+        <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
           질문 {questionNumber} / {totalQuestions}
         </div>
-        <h2 className="text-2xl font-semibold text-gray-800 leading-relaxed">
+        <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 leading-relaxed">
           {question.text}
         </h2>
       </div>
@@ -47,8 +47,8 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
             <div className="flex items-center">
               <div className={`w-6 h-6 rounded-full border-2 mr-4 flex items-center justify-center transition-all duration-200 ${
                 selectedAnswer === answer.id 
-                  ? 'border-primary-600 bg-primary-600' 
-                  : 'border-gray-300'
+                  ? 'border-primary-500 bg-primary-500' 
+                  : 'border-gray-300 dark:border-gray-500'
               }`}>
                 {selectedAnswer === answer.id && (
                   <motion.div

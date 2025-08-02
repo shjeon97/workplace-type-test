@@ -1,13 +1,9 @@
-// Personality Types
+// Personality Types - EXACTLY 4 types as requested
 export enum PersonalityType {
   LEADER = 'LEADER',
-  COLLABORATOR = 'COLLABORATOR',
+  COLLABORATOR = 'COLLABORATOR', 
   ANALYST = 'ANALYST',
-  CREATIVE = 'CREATIVE',
-  SUPPORTER = 'SUPPORTER',
-  INNOVATOR = 'INNOVATOR',
-  ORGANIZER = 'ORGANIZER',
-  COMMUNICATOR = 'COMMUNICATOR'
+  CREATIVE = 'CREATIVE'
 }
 
 // Question and Answer interfaces

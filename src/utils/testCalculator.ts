@@ -3,16 +3,12 @@ import { questions } from '../data/questions';
 import { personalityTypes } from '../data/personalityTypes';
 
 export function calculateTestResult(responses: UserResponse[]): TestResult {
-  // Initialize scores for all personality types
+  // Initialize scores for 4 personality types only
   const scores: Record<PersonalityType, number> = {
     [PersonalityType.LEADER]: 0,
     [PersonalityType.COLLABORATOR]: 0,
     [PersonalityType.ANALYST]: 0,
-    [PersonalityType.CREATIVE]: 0,
-    [PersonalityType.SUPPORTER]: 0,
-    [PersonalityType.INNOVATOR]: 0,
-    [PersonalityType.ORGANIZER]: 0,
-    [PersonalityType.COMMUNICATOR]: 0,
+    [PersonalityType.CREATIVE]: 0
   };
 
   // Calculate scores based on responses
