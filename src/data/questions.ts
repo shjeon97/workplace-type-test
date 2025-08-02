@@ -1,5 +1,6 @@
 import { Question, PersonalityType } from '../types';
 
+// EXACTLY 10 questions as requested
 export const questions: Question[] = [
   {
     id: '1',
@@ -12,11 +13,7 @@ export const questions: Question[] = [
           [PersonalityType.LEADER]: 3,
           [PersonalityType.COLLABORATOR]: 1,
           [PersonalityType.ANALYST]: 0,
-          [PersonalityType.CREATIVE]: 1,
-          [PersonalityType.SUPPORTER]: 0,
-          [PersonalityType.INNOVATOR]: 2,
-          [PersonalityType.ORGANIZER]: 2,
-          [PersonalityType.COMMUNICATOR]: 1
+          [PersonalityType.CREATIVE]: 1
         }
       },
       {
@@ -26,11 +23,7 @@ export const questions: Question[] = [
           [PersonalityType.LEADER]: 1,
           [PersonalityType.COLLABORATOR]: 3,
           [PersonalityType.ANALYST]: 1,
-          [PersonalityType.CREATIVE]: 3,
-          [PersonalityType.SUPPORTER]: 2,
-          [PersonalityType.INNOVATOR]: 2,
-          [PersonalityType.ORGANIZER]: 0,
-          [PersonalityType.COMMUNICATOR]: 3
+          [PersonalityType.CREATIVE]: 3
         }
       },
       {
@@ -40,25 +33,17 @@ export const questions: Question[] = [
           [PersonalityType.LEADER]: 0,
           [PersonalityType.COLLABORATOR]: 0,
           [PersonalityType.ANALYST]: 3,
-          [PersonalityType.CREATIVE]: 0,
-          [PersonalityType.SUPPORTER]: 1,
-          [PersonalityType.INNOVATOR]: 1,
-          [PersonalityType.ORGANIZER]: 2,
-          [PersonalityType.COMMUNICATOR]: 0
+          [PersonalityType.CREATIVE]: 0
         }
       },
       {
         id: '1d',
-        text: '세부적인 계획과 일정을 수립한다',
+        text: '창의적이고 혁신적인 접근 방법을 모색한다',
         scores: {
-          [PersonalityType.LEADER]: 2,
+          [PersonalityType.LEADER]: 1,
           [PersonalityType.COLLABORATOR]: 1,
-          [PersonalityType.ANALYST]: 2,
-          [PersonalityType.CREATIVE]: 0,
-          [PersonalityType.SUPPORTER]: 1,
-          [PersonalityType.INNOVATOR]: 0,
-          [PersonalityType.ORGANIZER]: 3,
-          [PersonalityType.COMMUNICATOR]: 1
+          [PersonalityType.ANALYST]: 0,
+          [PersonalityType.CREATIVE]: 3
         }
       }
     ]
@@ -74,11 +59,7 @@ export const questions: Question[] = [
           [PersonalityType.LEADER]: 3,
           [PersonalityType.COLLABORATOR]: 1,
           [PersonalityType.ANALYST]: 1,
-          [PersonalityType.CREATIVE]: 0,
-          [PersonalityType.SUPPORTER]: 1,
-          [PersonalityType.INNOVATOR]: 1,
-          [PersonalityType.ORGANIZER]: 2,
-          [PersonalityType.COMMUNICATOR]: 2
+          [PersonalityType.CREATIVE]: 0
         }
       },
       {
@@ -88,11 +69,7 @@ export const questions: Question[] = [
           [PersonalityType.LEADER]: 1,
           [PersonalityType.COLLABORATOR]: 3,
           [PersonalityType.ANALYST]: 1,
-          [PersonalityType.CREATIVE]: 1,
-          [PersonalityType.SUPPORTER]: 3,
-          [PersonalityType.INNOVATOR]: 1,
-          [PersonalityType.ORGANIZER]: 1,
-          [PersonalityType.COMMUNICATOR]: 3
+          [PersonalityType.CREATIVE]: 1
         }
       },
       {
@@ -102,11 +79,7 @@ export const questions: Question[] = [
           [PersonalityType.LEADER]: 2,
           [PersonalityType.COLLABORATOR]: 1,
           [PersonalityType.ANALYST]: 3,
-          [PersonalityType.CREATIVE]: 0,
-          [PersonalityType.SUPPORTER]: 0,
-          [PersonalityType.INNOVATOR]: 1,
-          [PersonalityType.ORGANIZER]: 2,
-          [PersonalityType.COMMUNICATOR]: 1
+          [PersonalityType.CREATIVE]: 0
         }
       },
       {
@@ -116,11 +89,7 @@ export const questions: Question[] = [
           [PersonalityType.LEADER]: 1,
           [PersonalityType.COLLABORATOR]: 2,
           [PersonalityType.ANALYST]: 0,
-          [PersonalityType.CREATIVE]: 3,
-          [PersonalityType.SUPPORTER]: 1,
-          [PersonalityType.INNOVATOR]: 3,
-          [PersonalityType.ORGANIZER]: 0,
-          [PersonalityType.COMMUNICATOR]: 2
+          [PersonalityType.CREATIVE]: 3
         }
       }
     ]
@@ -131,16 +100,12 @@ export const questions: Question[] = [
     answers: [
       {
         id: '3a',
-        text: '우선순위를 정하고 체계적으로 해결해 나간다',
+        text: '우선순위를 정하고 체계적으로 문제를 해결한다',
         scores: {
           [PersonalityType.LEADER]: 2,
           [PersonalityType.COLLABORATOR]: 1,
-          [PersonalityType.ANALYST]: 2,
-          [PersonalityType.CREATIVE]: 0,
-          [PersonalityType.SUPPORTER]: 1,
-          [PersonalityType.INNOVATOR]: 1,
-          [PersonalityType.ORGANIZER]: 3,
-          [PersonalityType.COMMUNICATOR]: 1
+          [PersonalityType.ANALYST]: 3,
+          [PersonalityType.CREATIVE]: 0
         }
       },
       {
@@ -150,25 +115,17 @@ export const questions: Question[] = [
           [PersonalityType.LEADER]: 0,
           [PersonalityType.COLLABORATOR]: 3,
           [PersonalityType.ANALYST]: 0,
-          [PersonalityType.CREATIVE]: 1,
-          [PersonalityType.SUPPORTER]: 3,
-          [PersonalityType.INNOVATOR]: 1,
-          [PersonalityType.ORGANIZER]: 0,
-          [PersonalityType.COMMUNICATOR]: 3
+          [PersonalityType.CREATIVE]: 1
         }
       },
       {
         id: '3c',
-        text: '문제의 근본 원인을 분석하고 해결책을 찾는다',
+        text: '강력한 리더십으로 상황을 통제한다',
         scores: {
-          [PersonalityType.LEADER]: 1,
+          [PersonalityType.LEADER]: 3,
           [PersonalityType.COLLABORATOR]: 0,
-          [PersonalityType.ANALYST]: 3,
-          [PersonalityType.CREATIVE]: 1,
-          [PersonalityType.SUPPORTER]: 0,
-          [PersonalityType.INNOVATOR]: 2,
-          [PersonalityType.ORGANIZER]: 2,
-          [PersonalityType.COMMUNICATOR]: 0
+          [PersonalityType.ANALYST]: 1,
+          [PersonalityType.CREATIVE]: 1
         }
       },
       {
@@ -178,11 +135,7 @@ export const questions: Question[] = [
           [PersonalityType.LEADER]: 1,
           [PersonalityType.COLLABORATOR]: 1,
           [PersonalityType.ANALYST]: 0,
-          [PersonalityType.CREATIVE]: 3,
-          [PersonalityType.SUPPORTER]: 1,
-          [PersonalityType.INNOVATOR]: 3,
-          [PersonalityType.ORGANIZER]: 0,
-          [PersonalityType.COMMUNICATOR]: 2
+          [PersonalityType.CREATIVE]: 3
         }
       }
     ]
@@ -198,11 +151,7 @@ export const questions: Question[] = [
           [PersonalityType.LEADER]: 3,
           [PersonalityType.COLLABORATOR]: 1,
           [PersonalityType.ANALYST]: 0,
-          [PersonalityType.CREATIVE]: 1,
-          [PersonalityType.SUPPORTER]: 0,
-          [PersonalityType.INNOVATOR]: 2,
-          [PersonalityType.ORGANIZER]: 1,
-          [PersonalityType.COMMUNICATOR]: 1
+          [PersonalityType.CREATIVE]: 1
         }
       },
       {
@@ -212,11 +161,7 @@ export const questions: Question[] = [
           [PersonalityType.LEADER]: 1,
           [PersonalityType.COLLABORATOR]: 3,
           [PersonalityType.ANALYST]: 1,
-          [PersonalityType.CREATIVE]: 1,
-          [PersonalityType.SUPPORTER]: 3,
-          [PersonalityType.INNOVATOR]: 1,
-          [PersonalityType.ORGANIZER]: 2,
-          [PersonalityType.COMMUNICATOR]: 2
+          [PersonalityType.CREATIVE]: 1
         }
       },
       {
@@ -226,11 +171,7 @@ export const questions: Question[] = [
           [PersonalityType.LEADER]: 1,
           [PersonalityType.COLLABORATOR]: 1,
           [PersonalityType.ANALYST]: 3,
-          [PersonalityType.CREATIVE]: 0,
-          [PersonalityType.SUPPORTER]: 2,
-          [PersonalityType.INNOVATOR]: 1,
-          [PersonalityType.ORGANIZER]: 3,
-          [PersonalityType.COMMUNICATOR]: 0
+          [PersonalityType.CREATIVE]: 0
         }
       },
       {
@@ -240,11 +181,7 @@ export const questions: Question[] = [
           [PersonalityType.LEADER]: 2,
           [PersonalityType.COLLABORATOR]: 1,
           [PersonalityType.ANALYST]: 1,
-          [PersonalityType.CREATIVE]: 3,
-          [PersonalityType.SUPPORTER]: 0,
-          [PersonalityType.INNOVATOR]: 3,
-          [PersonalityType.ORGANIZER]: 0,
-          [PersonalityType.COMMUNICATOR]: 1
+          [PersonalityType.CREATIVE]: 3
         }
       }
     ]
@@ -260,11 +197,7 @@ export const questions: Question[] = [
           [PersonalityType.LEADER]: 3,
           [PersonalityType.COLLABORATOR]: 1,
           [PersonalityType.ANALYST]: 1,
-          [PersonalityType.CREATIVE]: 1,
-          [PersonalityType.SUPPORTER]: 0,
-          [PersonalityType.INNOVATOR]: 2,
-          [PersonalityType.ORGANIZER]: 2,
-          [PersonalityType.COMMUNICATOR]: 2
+          [PersonalityType.CREATIVE]: 1
         }
       },
       {
@@ -274,11 +207,7 @@ export const questions: Question[] = [
           [PersonalityType.LEADER]: 1,
           [PersonalityType.COLLABORATOR]: 3,
           [PersonalityType.ANALYST]: 0,
-          [PersonalityType.CREATIVE]: 1,
-          [PersonalityType.SUPPORTER]: 3,
-          [PersonalityType.INNOVATOR]: 1,
-          [PersonalityType.ORGANIZER]: 1,
-          [PersonalityType.COMMUNICATOR]: 3
+          [PersonalityType.CREATIVE]: 1
         }
       },
       {
@@ -288,11 +217,7 @@ export const questions: Question[] = [
           [PersonalityType.LEADER]: 1,
           [PersonalityType.COLLABORATOR]: 0,
           [PersonalityType.ANALYST]: 3,
-          [PersonalityType.CREATIVE]: 1,
-          [PersonalityType.SUPPORTER]: 1,
-          [PersonalityType.INNOVATOR]: 2,
-          [PersonalityType.ORGANIZER]: 2,
-          [PersonalityType.COMMUNICATOR]: 0
+          [PersonalityType.CREATIVE]: 1
         }
       },
       {
@@ -302,11 +227,237 @@ export const questions: Question[] = [
           [PersonalityType.LEADER]: 1,
           [PersonalityType.COLLABORATOR]: 2,
           [PersonalityType.ANALYST]: 0,
-          [PersonalityType.CREATIVE]: 3,
-          [PersonalityType.SUPPORTER]: 1,
-          [PersonalityType.INNOVATOR]: 3,
-          [PersonalityType.ORGANIZER]: 0,
-          [PersonalityType.COMMUNICATOR]: 2
+          [PersonalityType.CREATIVE]: 3
+        }
+      }
+    ]
+  },
+  {
+    id: '6',
+    text: '업무에서 가장 중요하게 생각하는 가치는?',
+    answers: [
+      {
+        id: '6a',
+        text: '목표 달성과 성과 창출',
+        scores: {
+          [PersonalityType.LEADER]: 3,
+          [PersonalityType.COLLABORATOR]: 1,
+          [PersonalityType.ANALYST]: 2,
+          [PersonalityType.CREATIVE]: 1
+        }
+      },
+      {
+        id: '6b',
+        text: '팀워크와 상호 협력',
+        scores: {
+          [PersonalityType.LEADER]: 1,
+          [PersonalityType.COLLABORATOR]: 3,
+          [PersonalityType.ANALYST]: 1,
+          [PersonalityType.CREATIVE]: 1
+        }
+      },
+      {
+        id: '6c',
+        text: '정확성과 논리적 일관성',
+        scores: {
+          [PersonalityType.LEADER]: 1,
+          [PersonalityType.COLLABORATOR]: 0,
+          [PersonalityType.ANALYST]: 3,
+          [PersonalityType.CREATIVE]: 0
+        }
+      },
+      {
+        id: '6d',
+        text: '혁신과 창의적 발상',
+        scores: {
+          [PersonalityType.LEADER]: 1,
+          [PersonalityType.COLLABORATOR]: 1,
+          [PersonalityType.ANALYST]: 0,
+          [PersonalityType.CREATIVE]: 3
+        }
+      }
+    ]
+  },
+  {
+    id: '7',
+    text: '업무 환경에서 선호하는 의사소통 방식은?',
+    answers: [
+      {
+        id: '7a',
+        text: '직접적이고 명확한 지시와 피드백',
+        scores: {
+          [PersonalityType.LEADER]: 3,
+          [PersonalityType.COLLABORATOR]: 1,
+          [PersonalityType.ANALYST]: 2,
+          [PersonalityType.CREATIVE]: 0
+        }
+      },
+      {
+        id: '7b',
+        text: '열린 토론과 다양한 의견 교환',
+        scores: {
+          [PersonalityType.LEADER]: 1,
+          [PersonalityType.COLLABORATOR]: 3,
+          [PersonalityType.ANALYST]: 1,
+          [PersonalityType.CREATIVE]: 2
+        }
+      },
+      {
+        id: '7c',
+        text: '구체적인 데이터와 근거 기반 대화',
+        scores: {
+          [PersonalityType.LEADER]: 1,
+          [PersonalityType.COLLABORATOR]: 1,
+          [PersonalityType.ANALYST]: 3,
+          [PersonalityType.CREATIVE]: 0
+        }
+      },
+      {
+        id: '7d',
+        text: '자유로운 아이디어 공유와 브레인스토밍',
+        scores: {
+          [PersonalityType.LEADER]: 0,
+          [PersonalityType.COLLABORATOR]: 2,
+          [PersonalityType.ANALYST]: 0,
+          [PersonalityType.CREATIVE]: 3
+        }
+      }
+    ]
+  },
+  {
+    id: '8',
+    text: '업무 계획을 세울 때 당신의 스타일은?',
+    answers: [
+      {
+        id: '8a',
+        text: '큰 그림을 그리고 전략적으로 계획한다',
+        scores: {
+          [PersonalityType.LEADER]: 3,
+          [PersonalityType.COLLABORATOR]: 1,
+          [PersonalityType.ANALYST]: 2,
+          [PersonalityType.CREATIVE]: 1
+        }
+      },
+      {
+        id: '8b',
+        text: '팀원들과 함께 계획을 세우고 조율한다',
+        scores: {
+          [PersonalityType.LEADER]: 1,
+          [PersonalityType.COLLABORATOR]: 3,
+          [PersonalityType.ANALYST]: 1,
+          [PersonalityType.CREATIVE]: 1
+        }
+      },
+      {
+        id: '8c',
+        text: '세부적이고 체계적인 계획을 수립한다',
+        scores: {
+          [PersonalityType.LEADER]: 2,
+          [PersonalityType.COLLABORATOR]: 1,
+          [PersonalityType.ANALYST]: 3,
+          [PersonalityType.CREATIVE]: 0
+        }
+      },
+      {
+        id: '8d',
+        text: '유연하게 상황에 맞춰 계획을 조정한다',
+        scores: {
+          [PersonalityType.LEADER]: 1,
+          [PersonalityType.COLLABORATOR]: 2,
+          [PersonalityType.ANALYST]: 0,
+          [PersonalityType.CREATIVE]: 3
+        }
+      }
+    ]
+  },
+  {
+    id: '9',
+    text: '업무 성과를 평가받을 때 가장 기쁜 피드백은?',
+    answers: [
+      {
+        id: '9a',
+        text: '뛰어난 리더십과 추진력을 보여줬다',
+        scores: {
+          [PersonalityType.LEADER]: 3,
+          [PersonalityType.COLLABORATOR]: 1,
+          [PersonalityType.ANALYST]: 1,
+          [PersonalityType.CREATIVE]: 1
+        }
+      },
+      {
+        id: '9b',
+        text: '팀의 화합과 협력을 이끌어냈다',
+        scores: {
+          [PersonalityType.LEADER]: 1,
+          [PersonalityType.COLLABORATOR]: 3,
+          [PersonalityType.ANALYST]: 0,
+          [PersonalityType.CREATIVE]: 1
+        }
+      },
+      {
+        id: '9c',
+        text: '정확하고 신뢰할 수 있는 분석을 제공했다',
+        scores: {
+          [PersonalityType.LEADER]: 1,
+          [PersonalityType.COLLABORATOR]: 0,
+          [PersonalityType.ANALYST]: 3,
+          [PersonalityType.CREATIVE]: 0
+        }
+      },
+      {
+        id: '9d',
+        text: '혁신적이고 창의적인 해결책을 제시했다',
+        scores: {
+          [PersonalityType.LEADER]: 1,
+          [PersonalityType.COLLABORATOR]: 1,
+          [PersonalityType.ANALYST]: 0,
+          [PersonalityType.CREATIVE]: 3
+        }
+      }
+    ]
+  },
+  {
+    id: '10',
+    text: '이상적인 직장 환경은?',
+    answers: [
+      {
+        id: '10a',
+        text: '명확한 목표와 권한이 주어지는 환경',
+        scores: {
+          [PersonalityType.LEADER]: 3,
+          [PersonalityType.COLLABORATOR]: 1,
+          [PersonalityType.ANALYST]: 2,
+          [PersonalityType.CREATIVE]: 1
+        }
+      },
+      {
+        id: '10b',
+        text: '소통이 활발하고 협력적인 환경',
+        scores: {
+          [PersonalityType.LEADER]: 1,
+          [PersonalityType.COLLABORATOR]: 3,
+          [PersonalityType.ANALYST]: 1,
+          [PersonalityType.CREATIVE]: 2
+        }
+      },
+      {
+        id: '10c',
+        text: '체계적이고 안정적인 환경',
+        scores: {
+          [PersonalityType.LEADER]: 1,
+          [PersonalityType.COLLABORATOR]: 1,
+          [PersonalityType.ANALYST]: 3,
+          [PersonalityType.CREATIVE]: 0
+        }
+      },
+      {
+        id: '10d',
+        text: '자유롭고 창의적인 환경',
+        scores: {
+          [PersonalityType.LEADER]: 1,
+          [PersonalityType.COLLABORATOR]: 2,
+          [PersonalityType.ANALYST]: 0,
+          [PersonalityType.CREATIVE]: 3
         }
       }
     ]

@@ -16,7 +16,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartTest }) => {
     {
       icon: <Users className="w-8 h-8" />,
       title: '직장 맞춤형',
-      description: '업무 환경에 특화된 8가지 성격 유형 분류'
+      description: '업무 환경에 특화된 4가지 성격 유형 분류'
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
@@ -31,7 +31,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartTest }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-secondary-50">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <motion.div
@@ -52,10 +52,10 @@ const HomePage: React.FC<HomePageProps> = ({ onStartTest }) => {
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             <span className="text-gradient">직장인 성격 유형</span>
             <br />
-            <span className="text-gray-800">테스트</span>
+            <span className="text-gray-800 dark:text-gray-100">테스트</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             나는 어떤 유형의 직장인일까?<br />
             나만의 업무 스타일과 강점을 발견해보세요
           </p>
@@ -64,7 +64,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartTest }) => {
             onClick={onStartTest}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="btn-primary text-xl px-12 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+            className="btn-primary text-xl px-12 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center mx-auto whitespace-nowrap"
           >
             <Play className="w-6 h-6 mr-3" />
             테스트 시작하기
@@ -86,13 +86,13 @@ const HomePage: React.FC<HomePageProps> = ({ onStartTest }) => {
               transition={{ delay: 0.6 + index * 0.1 }}
               className="card text-center hover:shadow-xl transition-all duration-300"
             >
-              <div className="text-primary-600 mb-4 flex justify-center">
+              <div className="text-primary-600 dark:text-primary-400 mb-4 flex justify-center">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">
+              <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-100">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>
@@ -106,7 +106,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartTest }) => {
           transition={{ delay: 0.8 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <div className="card bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
+          <div className="card bg-gradient-to-r from-primary-500 to-secondary-500 text-white">
             <h2 className="text-3xl font-bold mb-6">
               🎯 어떤 결과를 얻을 수 있나요?
             </h2>
@@ -138,14 +138,14 @@ const HomePage: React.FC<HomePageProps> = ({ onStartTest }) => {
           transition={{ delay: 1 }}
           className="text-center mt-16"
         >
-          <p className="text-lg text-gray-600 mb-6">
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
             지금 바로 시작해서 나만의 직장인 성격 유형을 알아보세요!
           </p>
           <motion.button
             onClick={onStartTest}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="btn-primary text-lg px-10 py-3 rounded-full"
+            className="btn-primary text-lg px-10 py-3 rounded-full flex items-center justify-center mx-auto whitespace-nowrap"
           >
             무료로 테스트 시작 →
           </motion.button>

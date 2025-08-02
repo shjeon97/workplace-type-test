@@ -87,7 +87,7 @@ ${result.developmentAreas.map(area => `• ${area}`).join('\n')}
           <h1 className="text-4xl font-bold mb-4" style={{ color: typeInfo.color }}>
             {typeInfo.name}
           </h1>
-          <p className="text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto">
             {typeInfo.description}
           </p>
         </motion.div>
@@ -109,7 +109,7 @@ ${result.developmentAreas.map(area => `• ${area}`).join('\n')}
           transition={{ delay: 0.4 }}
           className="card"
         >
-          <h3 className="text-xl font-semibold mb-4 text-primary-700">💪 주요 강점</h3>
+          <h3 className="text-xl font-semibold mb-4 text-primary-700 dark:text-primary-400">💪 주요 강점</h3>
           <ul className="space-y-2">
             {result.strengths.map((strength, index) => (
               <motion.li
@@ -119,7 +119,7 @@ ${result.developmentAreas.map(area => `• ${area}`).join('\n')}
                 transition={{ delay: 0.5 + index * 0.1 }}
                 className="flex items-start"
               >
-                <span className="text-primary-500 mr-2">✓</span>
+                <span className="text-primary-500 dark:text-primary-400 mr-2">✓</span>
                 {strength}
               </motion.li>
             ))}
@@ -132,7 +132,7 @@ ${result.developmentAreas.map(area => `• ${area}`).join('\n')}
           transition={{ delay: 0.4 }}
           className="card"
         >
-          <h3 className="text-xl font-semibold mb-4 text-secondary-700">⚡ 업무 스타일</h3>
+          <h3 className="text-xl font-semibold mb-4 text-secondary-700 dark:text-secondary-400">⚡ 업무 스타일</h3>
           <ul className="space-y-2">
             {result.workStyle.map((style, index) => (
               <motion.li
@@ -142,7 +142,7 @@ ${result.developmentAreas.map(area => `• ${area}`).join('\n')}
                 transition={{ delay: 0.5 + index * 0.1 }}
                 className="flex items-start"
               >
-                <span className="text-secondary-500 mr-2">→</span>
+                <span className="text-secondary-500 dark:text-secondary-400 mr-2">→</span>
                 {style}
               </motion.li>
             ))}
@@ -155,7 +155,7 @@ ${result.developmentAreas.map(area => `• ${area}`).join('\n')}
           transition={{ delay: 0.6 }}
           className="card"
         >
-          <h3 className="text-xl font-semibold mb-4 text-green-700">🎯 이상적인 역할</h3>
+          <h3 className="text-xl font-semibold mb-4 text-green-700 dark:text-green-400">🎯 이상적인 역할</h3>
           <ul className="space-y-2">
             {result.idealRole.map((role, index) => (
               <motion.li
@@ -165,7 +165,7 @@ ${result.developmentAreas.map(area => `• ${area}`).join('\n')}
                 transition={{ delay: 0.7 + index * 0.1 }}
                 className="flex items-start"
               >
-                <span className="text-green-500 mr-2">●</span>
+                <span className="text-green-500 dark:text-green-400 mr-2">●</span>
                 {role}
               </motion.li>
             ))}
@@ -178,7 +178,7 @@ ${result.developmentAreas.map(area => `• ${area}`).join('\n')}
           transition={{ delay: 0.6 }}
           className="card"
         >
-          <h3 className="text-xl font-semibold mb-4 text-orange-700">📈 개발 영역</h3>
+          <h3 className="text-xl font-semibold mb-4 text-orange-700 dark:text-orange-400">📈 개발 영역</h3>
           <ul className="space-y-2">
             {result.developmentAreas.map((area, index) => (
               <motion.li
@@ -188,7 +188,7 @@ ${result.developmentAreas.map(area => `• ${area}`).join('\n')}
                 transition={{ delay: 0.7 + index * 0.1 }}
                 className="flex items-start"
               >
-                <span className="text-orange-500 mr-2">↗</span>
+                <span className="text-secondary-500 dark:text-secondary-400 mr-2">↗</span>
                 {area}
               </motion.li>
             ))}

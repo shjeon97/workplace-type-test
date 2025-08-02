@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  # workplace-type-test Frontend (기존 도메인)
+  workplace-type-test-front:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: workplace-type-test-front
+    restart: unless-stopped
+    ports:
+      - "3005:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - shared-network
+
+  # work-place-type-test Frontend (새로운 도메인, 다른 앱)
+  work-place-type-test-front:
+    build:
+      context: ../work-place-type-test-source
+      dockerfile: Dockerfile
+    container_name: work-place-type-test-front
+    restart: unless-stopped
+    ports:
+      - "3009:80"
+    volumes:
+      - ../work-place-type-test-source/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - shared-network
+
+networks:
+  shared-network:
+    external: true
+    name: shared-apps-network

@@ -4,6 +4,8 @@ import HomePage from './components/HomePage';
 import QuestionCard from './components/QuestionCard';
 import ResultCard from './components/ResultCard';
 import ProgressBar from './components/ProgressBar';
+import DarkModeToggle from './components/DarkModeToggle';
+import { ThemeProvider } from './contexts/ThemeContext';
 import { TestState, UserResponse, PersonalityType } from './types';
 import { questions } from './data/questions';
 import { calculateTestResult } from './utils/testCalculator';
@@ -122,57 +124,61 @@ function App() {
   const canProceed = selectedAnswer !== null;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      <AnimatePresence mode="wait">
-        {appState === AppState.HOME && (
-          <HomePage key="home" onStartTest={startTest} />
-        )}
+    <ThemeProvider>
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+        <DarkModeToggle />
 
-        {appState === AppState.TEST && currentQuestion && (
-          <div key="test" className="container mx-auto px-4 py-8">
-            <ProgressBar 
-              current={testState.currentQuestion + 1} 
-              total={questions.length} 
-            />
-            
-            <QuestionCard
-              question={currentQuestion}
-              selectedAnswer={selectedAnswer}
-              onAnswerSelect={handleAnswerSelect}
-              questionNumber={testState.currentQuestion + 1}
-              totalQuestions={questions.length}
-            />
+        <AnimatePresence mode="wait">
+          {appState === AppState.HOME && (
+            <HomePage key="home" onStartTest={startTest} />
+          )}
 
-            <div className="flex justify-between max-w-4xl mx-auto mt-8">
-              <button
-                onClick={moveToPreviousQuestion}
-                disabled={testState.currentQuestion === 0}
-                className="btn-secondary disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                ← 이전
-              </button>
+          {appState === AppState.TEST && currentQuestion && (
+            <div key="test" className="container mx-auto px-4 py-8 flex flex-col items-center justify-center min-h-[calc(100vh-64px)]">
+              <ProgressBar 
+                current={testState.currentQuestion + 1} 
+                total={questions.length} 
+              />
               
-              <button
-                onClick={moveToNextQuestion}
-                disabled={!canProceed}
-                className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {testState.currentQuestion === questions.length - 1 ? '결과 보기' : '다음 →'}
-              </button>
-            </div>
-          </div>
-        )}
+              <QuestionCard
+                question={currentQuestion}
+                selectedAnswer={selectedAnswer}
+                onAnswerSelect={handleAnswerSelect}
+                questionNumber={testState.currentQuestion + 1}
+                totalQuestions={questions.length}
+              />
 
-        {appState === AppState.RESULT && testState.result && (
-          <div key="result" className="container mx-auto px-4 py-8">
-            <ResultCard 
-              result={testState.result}
-              onRestart={restartTest}
-            />
-          </div>
-        )}
-      </AnimatePresence>
-    </div>
+              <div className="flex justify-between max-w-4xl mx-auto mt-8 w-full">
+                <button
+                  onClick={moveToPreviousQuestion}
+                  disabled={testState.currentQuestion === 0}
+                  className="btn-secondary disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  ← 이전
+                </button>
+                
+                <button
+                  onClick={moveToNextQuestion}
+                  disabled={!canProceed}
+                  className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {testState.currentQuestion === questions.length - 1 ? '결과 보기' : '다음 →'}
+                </button>
+              </div>
+            </div>
+          )}
+
+          {appState === AppState.RESULT && testState.result && (
+            <div key="result" className="container mx-auto px-4 py-8">
+              <ResultCard 
+                result={testState.result}
+                onRestart={restartTest}
+              />
+            </div>
+          )}
+        </AnimatePresence>
+      </div>
+    </ThemeProvider>
   );
 }
 
